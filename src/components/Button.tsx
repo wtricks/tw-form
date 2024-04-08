@@ -4,13 +4,13 @@ interface ButtonProps {
     children: JSX.Element | JSX.Element[] | string,
     className?: string
     title?: string,
-    onClick: () => void
+    onClick?: () => void
 }
 
 const Button = ({ variant, type, children, onClick, className, title }: ButtonProps) => {
     const baseStyles = {
         primary: 'bg-slate-800 text-white ',
-        secondry: 'text-slate-700 border hover:opacity-75 ',
+        secondry: 'text-slate-700 border border-slate-700 hover:opacity-75 ',
         default: 'p-2.5 py-2 transition rounded-md text-sm font-bold hover:opacity-80 active:scale-95 '
     }
     return (
